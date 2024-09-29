@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>GPT Processing Output</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo">Logo</div>
+            <div class="header-buttons">
+                <button>Log In</button>
+                <button>Sign Up</button>
+            </div>
+        </header>
+
+        <h1>Here is Your Uploaded Picture</h1>
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Picture">
+        <br>
+
+        <div class="wrapper">
+        <section class="markdown-section">
+            <div class="markdown-content">
+                <h2>Normal recipe: </h2>
+                {{ normal|safe }}
+            </div>
+        </section>
+        </div>
+
+        <div class="wrapper">
+        <section class="markdown-section"></section>
+            <div class="markdown-content">
+                <h2>Shopping List: </h2>
+                {{ shopping|safe }}
+            </div>
+        </section>
+        </div>
+
+        <div class="wrapper">
+        <section class="markdown-section"></section>
+            <div class="markdown-content">
+                <h2>Healthy recipe: </h2>
+                {{ healthy|safe }}
+            </div>
+        </section>
+        </div>
+
+        <section class="return-section">
+            <a href="/">Upload Another Picture</a>
+        </section>
+    </div>
+</body>
+</html>
+

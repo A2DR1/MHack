@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Healthy Recipes for College Students</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo">Logo</div>
+            <nav class="nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="header-buttons">
+                <button>Log In</button>
+                <button>Sign Up</button>
+            </div>
+        </header>
+
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1>Heacipe</h1>
+                <p>Healthy recipes for every new college student</p>
+
+                <a href="{{ url_for('start') }}">
+                    <button type="button" class="enlarged-button">Start</button>
+                </a>
+                <!-- <button class="enlarged-button", onclick="window.location.href='upload.html'">Start</button> -->
+
+            </div>
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='webresource/Healthy.jpeg') }}" alt="Healthy ingredients" class="hero-image">
+            </div>
+        </div>
+        
+        <section class="about">
+            <h2>About Us</h2>
+            <pre>Welcome to [Your Website Name], your one-stop kitchen companion designed to make meal planning a breeze for college students! We understand that navigating meal prep with a hectic schedule, a tight budget, and limited cooking experience can be overwhelming—especially when you’re unsure what to do with the random assortment of ingredients in your fridge.
+
+                Our mission is to turn your everyday fridge chaos into culinary creativity. Simply snap a picture of what’s inside, and let our smart system do the rest. We’ll identify your ingredients and provide you with:
+                
+                    •	Normal Recipe: Delicious and easy recipes you can make right away using what you already have.
+                    •	Shopping List: A tailored shopping list of key ingredients to elevate your meals, so you can eat well and save money.
+                    •	Healthy Recipe: Nutritious and balanced meal options combining what’s in your fridge with items from your shopping list.
+                
+                No more stressing over what to eat or where to start in the kitchen. Whether you’re new to cooking or simply want to make the most of your ingredients, [Your Website Name] is here to make sure every college student can enjoy easy, affordable, and healthy meals.</pre>
+        </section>
+
+        <section class="fridge-section">
+            <img src="{{ url_for('static', filename='webresource/Fridge2.jpeg') }}" alt="Fridge" class="fridge-image">
+            <div class="arrows-container">
+                <!-- SVG Arrows pointing to each recipe -->
+                <img src="{{ url_for('static', filename='webresource/right-arrow-svgrepo-com.svg') }}" alt="Arrow to recipe 1" class="arrow arrow1">
+                <img src="{{ url_for('static', filename='webresource/right-arrow-svgrepo-com.svg') }}" alt="Arrow to recipe 2" class="arrow arrow2">
+                <img src="{{ url_for('static', filename='webresource/right-arrow-svgrepo-com.svg') }}" alt="Arrow to recipe 3" class="arrow arrow3">
+            </div>
+        </section>
+
+        <section class="recipes">
+            <h2>Sample recipes</h2>
+            <div class="recipes-grid">
+                <div class="recipe">
+                    <img src="{{ url_for('static', filename='webresource/Salad.jpeg') }}" alt="Salad">
+                    <h3>Salad</h3>
+                    <ol>
+                        <li>Sliced cucumber (looks like watermelon radish)</li>
+                        <li>Hard-boiled egg (cut in half)</li>
+                        <li>Cherry tomatoes</li>
+                        <li>Zucchini noodles (spiralized)</li>
+                        <li>Leafy greens (possibly kale or spinach)</li>
+                        <li>Grated carrots</li>
+                        <li>A sprinkle of sesame seeds (or similar topping)</li>
+                    </ol>
+                </div>
+                <div class="recipe">
+                    Sala
+                    <img src="{{ url_for('static', filename='webresource/Pasta.jpeg') }}" alt="Pasta">
+                    <h3>Pasta</h3>
+                    <ol>
+                        <li>Spaghetti pasta</li>
+                        <li>Tomato sauce or crushed tomatoes</li>
+                        <li>Ground meat (beef, pork, or a mix) for a Bolognese, or it could be a meatless sauce</li>
+                        <li>Olive oil</li>
+                        <li>Onion and garlic</li>
+                        <li>Salt and pepper</li>
+                        <li>Herbs (such as basil, oregano, or thyme)</li>
+                    </ol>
+                </div>
+                <div class="recipe">
+                    <img src="{{ url_for('static', filename='webresource/Chickenwings.jpeg') }}" alt="Chickenwings">
+                    <h3>Chicken Wings</h3>
+                    <ol>
+                        <li>Chicken wings</li>
+                        <li>Barbecue or buffalo sauce</li>
+                        <li>Sesame seeds for garnish</li>
+                        <li>Red onion and green bell pepper for a side salad</li>
+                        <li>A dipping sauce (ranch or blue cheese dip)</li>
+                        <li>Salt and pepper</li>
+                        <li>Possibly garlic or paprika for seasoning the wings</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
